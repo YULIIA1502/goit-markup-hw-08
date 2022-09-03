@@ -1,0 +1,117 @@
+.choose__conteiner{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px 8px;
+    justify-content: flex-start;
+    @media  screen and (min-width: 768px) {
+        justify-content: center; 
+    }
+
+
+   
+}
+.choose__btn{
+    display: inline-block;
+    text-align: center;
+    padding: 6px 22px;
+    width: 100%;
+
+    font-family: inherit;
+    @include text (16px, 1.625, 500, 0.03em);
+    color: var(--header-color);
+    background: var(--btn-portfolio-color);
+    border: transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &--first{
+        padding: 6px 25px;
+    }
+    &--active{
+        background: var(--active-color);
+        color: var(--btn-text-active-color);
+    }
+    &:hover,
+    &:focus{
+        background: var(--active-color);
+        color: var(--btn-text-active-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }      
+}
+
+
+.main__portfolio{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.portfolio__list{
+    width: 100%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+    @media  screen and (min-width: 768px) {
+        width: calc(( 100% - 30px) / 2);   
+    }
+    @media  screen and (min-width: 1200px) {
+        width: calc(( 100% - 60px) / 3); 
+    }
+}
+
+
+.portfolio__box{
+    // height: 294px;
+    position: relative;
+    overflow: hidden;
+
+}
+.portfolio__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    // height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    display: block;
+    padding: 77px 24px;
+    transform: translateY(101%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .portfolio__link:hover &,
+        .portfolio__link:focus &{
+        transform: translateY(0);
+}   
+}
+
+.portfolio__text{
+    @include text (18px, 1.56, 400, 0.03em);
+    color: var(--light-header-color);
+}
+
+
+.portfolio__link{
+    display: flex;
+    flex-direction: column;
+}
+
+.portfolio__conteiner{
+    flex-grow: 1;
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
+}
+
+.portfolio__title{
+    @include text (18px, 2, 700, null);
+    color: var(--header-color);
+}
+
+.portfolio__after-title{
+    margin-top: 4px;
+    @include text (16px, 1.87, null, null);
+    color:var(--text-color);
+}

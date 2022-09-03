@@ -1,0 +1,205 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0.5);
+
+}
+
+   
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); 
+
+    height: 581px;
+    width: 528px;
+    padding: 40px;
+    background-color:var(--main-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.modal__btn{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+    color:#212121;
+
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-background-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+        &:hover,
+        &:focus{ 
+        color:var(--active-color);
+    }
+}
+
+.modal__close-icon{
+    fill:currentColor;
+}
+
+
+.service__title{
+    @include text (20px, 1.15, 700, 0.03em);
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.service__conteiner{
+    display:flex;
+    flex-direction: column; 
+    margin-bottom: 10px;
+}
+
+
+.service__label{
+    margin-bottom: 4px;
+    @include text (12px, 1.16, 400, 0.01em);
+    color: var(--text-color);
+}
+
+.service__wraper{
+    position: relative;
+}
+
+.service__input{
+    font: inherit;
+    width: 100%;
+    height: 40px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+        &:focus,
+        &:hover{
+        border-color: var(--active-color);
+}
+}
+
+.service__icon{
+    position: absolute;
+    top:50%;
+    left:15px;
+    transform: translateY(-50%);
+    display: inline-block;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        .service__input:focus + &,
+        .service__input:hover + & {
+            fill: var(--active-color);
+}
+}
+
+
+.service__coment{
+    display:flex;
+    flex-direction: column; 
+    margin-bottom: 20px;
+
+    @include text (12px, 1.16, 400, null);
+}
+
+.service__textare{
+    padding: 12px 16px;
+    cursor: pointer;
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &::placeholder{
+            @include text (12px, 1.16, 400, 0.01em);
+            color: rgba(117, 117, 117, 0.5);
+    }
+        &:focus,
+        &:hover{
+            border-color: var(--active-color);
+    }
+}
+
+
+
+.service__checkbox{
+    margin-bottom: 30px;
+    padding:  0 12px;
+}
+
+
+.checkbox__label{
+    display: flex;
+    align-items:center;
+    justify-content: space-evenly;
+    font: inherit;
+    @include text (14px, 1.71, 400, 0.03em);
+    color: var(--text-color);
+}
+
+.checkbox__icon{
+    width: 16px;
+    height: 15px;
+    border: 2px solid #212121;
+    border-radius: 4px;    
+    .checkbox__input:checked ~ &{
+        border-color:var(--active-color);
+        background-color: var(--active-color);
+        background-image: url(../images/icon_check.svg);
+        background-size: contain;
+        background-origin: border-box;
+    } 
+}
+
+.checkbox__link{
+    color: var(--active-color);
+}
+
+.service__btn{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 10px 52px;
+    font: inherit;
+    letter-spacing: 0.06em;
+    color: var(--btn-text-active-color);
+    background: var(--btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus,
+        &:hover{
+        background-color: #188CE8;
+    }
+}

@@ -1,0 +1,200 @@
+.footer{   
+    padding: 60px 0;
+    background: var(--footer-background-color);
+}
+
+.footer__conteiner{
+    display: flex;
+
+    @media  screen and (max-width: 767px){
+        flex-direction: column;
+    }
+    @media  screen and (min-width: 768px) and (max-width: 1199px) {
+        flex-wrap: wrap;
+        align-items:baseline;
+    }
+    @media  screen and (min-width: 1200px) {
+        align-items: baseline;  
+    }
+
+    
+}
+.footer__wraper{
+    @media  screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-left: 76px;
+    }
+    
+}
+.footer__logo{
+    @media  screen and (max-width: 1199px){
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+.footer__contacts{
+    margin-top: 20px;
+    font-style: normal;
+}
+    
+.footer__items:not(:first-child){
+    margin-top: 8px;
+}
+
+.footer__address{
+    @include text (14px, 1.71, null, 0.03em);
+    color: var(--light-header-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        color:var(--active-color);
+    }
+    @media  screen and (max-width: 1199px){
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer__mail, .footer__tel{
+    @include text (14px, 1.71, null, 0.03em);
+    color: var(--footer-address-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus,
+        &:hover,
+        &:focus {
+        color:var(--active-color);
+    }
+    @media  screen and (max-width: 1199px){
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer__slogan{
+    @media  screen and (max-width: 767px){
+        padding-top: 60px;
+    }
+    @media  screen and (min-width: 768px)and (max-width: 1199px){
+        padding-right: 89px;
+        margin-left: auto;
+    }
+    @media  screen and (min-width: 1200px){
+        margin-left: 70px;
+}
+   
+}
+
+.slogan__title {
+    @include text (16px, 1.14, 700, 0.03em);
+    text-transform: uppercase;
+    color:var(--logo-light-color);
+    @media  screen and (max-width: 1199px){
+        text-align: center;
+    }
+
+}
+
+.slogan__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.footer__form{
+    padding-top: 60px;
+    @media  screen and (min-width: 768px) and (max-width: 1199px) {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @media  screen and (min-width: 1200px){
+        margin-left: auto;
+        padding-top: 0;
+    }
+}
+
+
+.signature__form{
+    margin-top: 20px;
+    display: flex;
+    @media  screen and (max-width: 1199px) {
+        flex-direction: column;
+    }
+    @media  screen and (min-width: 768px) and (max-width: 1199px) {
+        justify-content: center; 
+        align-items:center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.signature__title{
+    height:fit-content;
+    @include text (14px, 1.14, 700, 0.03em);
+    text-transform: uppercase;
+    color:var(--logo-light-color);
+    @media  screen and (max-width: 1199px){
+        text-align: center;
+    }
+}
+
+.signature__input{
+    padding: 15px 16px;
+    color:#FFFFFF;
+    background-color: var(--footer-background-color);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover,
+        &:focus {
+        border-color: var(--active-color);
+}
+    @media  screen and (max-width: 1199px){
+        width: 100%;
+        max-width: 450px;
+    }
+    @media  screen and (min-width: 1200px){
+        width: 358px;
+        margin-right: 12px;
+    }
+}
+
+
+.signature__btn{
+    position: relative;
+    display: flex;
+    align-items:center;
+    width: 200px;
+
+    font-family: inherit;
+    @include text (16px, 1.87, 700, 0.06em);
+    color: var(--btn-text-active-color);
+   
+    background: var(--btn-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: transparent;
+    padding: 0;
+    padding-left: 28px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    @media  screen and (max-width: 1199px){
+        height: 50px;
+        margin-top: 20px;
+    }
+
+}
+
+
+.signature__icon{
+    position: absolute;
+    left: 148px;
+    top: 13px;
+    fill: currentColor;
+}

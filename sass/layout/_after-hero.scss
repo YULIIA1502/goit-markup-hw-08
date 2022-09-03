@@ -1,0 +1,44 @@
+.after-hero__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.after-hero__item {
+    width: 100%;
+    @media screen and(min-width: 768px) {
+        width: calc(( 100% - 30px) / 2); 
+    }
+    @media  screen and (min-width: 1200px) {
+        width: calc(( 100% - 90px) / 4);   
+    }
+
+}
+
+.after-hero__conteiner {
+    height: 120px;
+    background-color: var(--after-hero-icon-background-color);
+    border-radius: 4px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+}
+
+.after-hero__subtitle {
+    text-align: center;
+    margin-top: 30px;
+    @include text (14px, 1.14, 700, 0.03em);
+    text-transform: uppercase;
+    color:var(--header-color);
+    @media screen and(min-width: 768px) {
+        text-align: left; 
+    }
+}
+.after-hero__text {
+    margin-top: 10px;
+    @include text (14px, 1.71, null, 0.03em);
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color:var(--text-color);
+}
