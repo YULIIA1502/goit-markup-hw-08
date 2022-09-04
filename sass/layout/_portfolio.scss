@@ -73,23 +73,30 @@
 }
 .portfolio__overlay{
     position: absolute;
+    overflow: auto;
     top: 0;
     left: 0;
     // height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
     display: block;
-    padding: 77px 24px;
+    padding: 65px 24px;
     transform: translateY(101%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
         .portfolio__link:hover &,
         .portfolio__link:focus &{
         transform: translateY(0);
-}   
+        } 
+        @media  screen and (min-width: 370px) {
+            padding: 77px 24px;  
+        }  
 }
 
 .portfolio__text{
-    @include text (18px, 1.56, 400, 0.03em);
+    font-size: 16px; 
     color: var(--light-header-color);
+    @media  screen and (min-width: 390px) {
+        @include text (18px, 1.56, 400, 0.03em); 
+    }
 }
 
 
@@ -106,8 +113,10 @@
 }
 
 .portfolio__title{
+    font-size: 14px;
     @include text (18px, 2, 700, null);
     color: var(--header-color);
+    
 }
 
 .portfolio__after-title{
