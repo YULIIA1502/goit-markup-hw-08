@@ -8,30 +8,27 @@
 
    
 .modal{
-    position: absolute;
-    left: 15px;
-    top: 93px;
-    transform: scale(1);
-    
-    // transform: translate(-50%, -50%) scale(1); 
-
-    
-    background-color:var(--main-background-color);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    max-height: 100%;
+    max-width: 100%;
     width: 450px;
     height: 100%;
+
     padding: 40px;
-
-
-    // height: 581px;
-    // width: 528px;
-    // top: 50%;
-    // left: 50%;
+    display: block;
+    justify-content: flex-end;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    opacity: 1;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-
-
+    @media  screen and (min-width: 1200px) {
+        max-width: 528px;   
+    }
 
 }
 
@@ -52,6 +49,7 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus{ 
         color:var(--active-color);
@@ -64,13 +62,14 @@
 
 
 .service__title{
+    font-style: normal;
     @include text (20px, 1.15, 700, 0.03em);
     text-align: center;
     margin-bottom: 12px;
-
-    
-
-
+    color: var(--header-color);
+    @media  screen and (min-width: 1200px) {
+        @include text (23px, 1.72, 700, 0.03em);  
+    }
 }
 
 .service__conteiner{
@@ -81,9 +80,11 @@
 
 
 .service__label{
+    display: block;
     margin-bottom: 4px;
-    @include text (12px, 1.16, 400, 0.01em);
+    @include text (12px, 1.17, 400, 0.01em);
     color: var(--text-color);
+
 }
 
 .service__wraper{
@@ -94,14 +95,20 @@
     font: inherit;
     width: 100%;
     height: 40px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
+   
+
+    // padding-top: 14px;
+    // padding-bottom: 14px;
+
+
         &:focus,
         &:hover{
         border-color: var(--active-color);
@@ -111,14 +118,15 @@
 .service__icon{
     position: absolute;
     top:50%;
-    left:15px;
+    left:12px;
     transform: translateY(-50%);
     display: inline-block;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         .service__input:focus + &,
         .service__input:hover + & {
             fill: var(--active-color);
-}
+        }
+
 }
 
 
@@ -126,11 +134,12 @@
     display:flex;
     flex-direction: column; 
     margin-bottom: 20px;
-
-    @include text (12px, 1.16, 400, null);
+    @include text (14px, 1.14, 400, 0.1em);
 }
 
 .service__textare{
+    width: 100%;
+    height: 120px;
     padding: 12px 16px;
     cursor: pointer;
     resize: none;
@@ -139,7 +148,7 @@
     border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &::placeholder{
-            @include text (12px, 1.16, 400, 0.01em);
+            @include text (12px, 1.14, 400, 0.01em);
             color: rgba(117, 117, 117, 0.5);
     }
         &:focus,
@@ -152,22 +161,26 @@
 
 .service__checkbox{
     margin-bottom: 30px;
-    // padding:  0 12px;
+}
+.checkbox__label{
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
 
-.checkbox__label{
-    display: flex;
+.checkbox__text{
+    display: block;
     align-items:center;
-    justify-content: space-evenly;
-    font: inherit;
+    margin-left: 8px;
     @include text (12px, 1.71, 400, 0.03em);
     color: var(--text-color);
+    
 
-    // @include text (14px, 1.71, 400, 0.03em);
 }
 
 .checkbox__icon{
+    display: inline-block;
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
@@ -183,6 +196,8 @@
 
 .checkbox__link{
     color: var(--active-color);
+    text-decoration: none;
+    border-bottom: 1px solid var(--active-color);
 }
 
 .service__btn{
@@ -199,6 +214,7 @@
     background: var(--btn-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    border: none;
     border: transparent;
     cursor: pointer;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
