@@ -1,9 +1,11 @@
 .header{
     border-bottom: 1px solid #ECECEC; 
     width: 100%;
-    .conteiner {
-        display: flex;
-    }
+    position: relative;
+}
+
+.wraper {
+    display: flex;
 }
 
 .navigation{
@@ -136,3 +138,5 @@
 .navigation__page:focus {
     color:var(--active-color);
 }
+
+

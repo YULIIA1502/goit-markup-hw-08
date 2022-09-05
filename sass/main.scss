@@ -7,9 +7,12 @@
 @import"./utils/hidden";
 @import"./components/conteiner";
 @import"./components/section";
+@import"./components/backdrop";
+
 
 @import "./components/logo";
 @import "./layout/header";
+@import "./layout/mobile-navigation";
 
 @import "./layout/hero";
 @import "./layout/after-hero";
