@@ -50,12 +50,7 @@
 }
 
 .portfolio__list{
-    width: 100%;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus{
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
+    
     @media  screen and (min-width: 768px) {
         width: calc(( 100% - 30px) / 2);   
     }
@@ -103,6 +98,12 @@
 .portfolio__link{
     display: flex;
     flex-direction: column;
+    height: 100%;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .portfolio__conteiner{
@@ -114,13 +115,13 @@
 
 .portfolio__title{
     font-size: 14px;
-    @include text (18px, 2, 700, null);
+    @include text (18px, 2, 700, 0.06em);
     color: var(--header-color);
     
 }
 
 .portfolio__after-title{
     margin-top: 4px;
-    @include text (16px, 1.87, null, null);
+    @include text (16px, 1.87, 400, 0.03em);
     color:var(--text-color);
 }

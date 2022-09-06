@@ -27,13 +27,13 @@
                 </nav> 
                 <ul class="contacts header__contacts list">
                     <li class="contacts__items">
-                        <a href="moilto:info@devstudio.com" class="contacts__link link">
+                        <a href="moilto:info@devstudio.com" class="contacts__link contact__link--mail link">
                             <svg class="contacts__icon contacts__icon--mail"> 
                                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
                             </svg> 
                             info@devstudio.com </a></li>
                     <li class="contacts__items"> 
-                        <a href="tel:+380961111111" class="contacts__link link">
+                        <a href="tel:+380961111111" class="contacts__link contact__link--tel link">
                             <svg class="contacts__icon contacts__icon--tel">
                                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
                             </svg>
@@ -47,45 +47,49 @@
                 </button>
         </div>
             <div class="mob-menu is-hidden">
-                <div class="conteiner">
+                <div class="mob__conteiner">
                     <button class="menu-close" type="button">
                         <svg  class="mob__icon-close" width="18.6" height="18.6">
                             <use href="./images/symbol-defs.svg#icon-close-black"></use>
                         </svg>
                     </button>
-                    <ul class="navigation__mob link list">
-                        <li class="mob__page"> <a  class="mob__link link" href="./index.html">Студія</a></li>
-                        <li class="mob__page"> <a class="mob__link link" href="./portfolio.html">Портфоліо</a></li>
-                        <li class="mob__page"> <a class="mob__link link" href="#">Контакти</a></li>
-                    </ul>
-                    <ul class="mob__contacts list">
-                        <li class="mob__items">
-                            <a href="tel:+380961111111" class="mob__tel link">
-                                +38 096 111 11 11</a> 
+                    <div class="nav__conteiner">
+                        <ul class="navigation__mob link list">
+                            <li class="mob__page"> <a  class="mob__link mob__link--active link" href="./index.html">Студія</a></li>
+                            <li class="mob__page"> <a class="mob__link link" href="./portfolio.html">Портфоліо</a></li>
+                            <li class="mob__page"> <a class="mob__link link" href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                    <div class="conteiner__contact">
+                        <ul class="mob__contacts list">
+                            <li class="mob__items">
+                                <a href="tel:+380961111111" class="mob__tel link">
+                                    +38 096 111 11 11</a> 
+                                </li>
+                            <li class="contacts__items"> 
+                               <a href="moilto:info@devstudio.com" class="mob__mail link"> 
+                                    info@devstudio.com </a>
+                            </li> 
+                        </ul>
+                        <ul class="mob__profile">
+                            <li class="mob__social list">
+                                <a href="#" class="mob__social-link link"> Instagram
+                                </a>
                             </li>
-                        <li class="contacts__items"> 
-                           <a href="moilto:info@devstudio.com" class="mob__mail link"> 
-                                info@devstudio.com </a>
-                        </li> 
-                    </ul>
-                    <ul class="mob__profile">
-                        <li class="mob__social list">
-                            <a href="#" class="mob__social-link link"> Instagram
-                            </a>
-                        </li>
-                        <li class="mob__social list">
-                            <a href="#" class="mob__social-link link"> Twitter
-                            </a>
-                        </li>
-                        <li class="mob__social list">
-                            <a href="#" class="mob__social-link link"> Facebook
-                            </a>
-                        </li>
-                        <li class="mob__social list">
-                            <a href="#" class="mob__social-link link"> LinkedIn
-                            </a>
-                        </li>
-                    </ul>
+                            <li class="mob__social list">
+                                <a href="#" class="mob__social-link link"> Twitter
+                                </a>
+                            </li>
+                            <li class="mob__social list">
+                                <a href="#" class="mob__social-link link"> Facebook
+                                </a>
+                            </li>
+                            <li class="mob__social list">
+                                <a href="#" class="mob__social-link link"> LinkedIn
+                                </a>
+                            </li>
+                        </ul>
+                    </div>  
                 </div>
             </div>
         <!-- </div> -->
@@ -94,7 +98,7 @@
     </header>
     <main>
         <section class="hero">
-            <div class="conteiner">
+            <div class="hero__conteiner">
                 <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
                 <button class="hero__btn" type="button" data-modal-open >Замовити послугу</button>
             </div>

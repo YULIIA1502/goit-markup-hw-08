@@ -69,7 +69,6 @@
         display:flex;
         flex-wrap: wrap;
         margin-right: auto;  
-        padding: 21px 0;
     }
     @media screen and (min-width: 1200px) {
         display: flex;
@@ -96,17 +95,28 @@
     @include text (12px, 1.17, 500, 0.02em);
     color: var(--text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
         @include text (14px, 1.14, 500, 0.02em);
         padding: 32px 0;
        
     }
-
     &:hover,
     &:focus {
         color:var(--active-color);
     }
 }
+
+.contact__link--mail{
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        padding-top: 21px;
+    }  
+}
+.contact__link--tel{
+    @media screen and (min-width:768px) and (max-width: 1199px) {
+        padding-bottom: 21px;
+    }      
+}
+
 
 
 

@@ -1,6 +1,10 @@
 .client__title{
     @include text (28px, 1.17, 700, 0.03em);
     text-align: center;
+    
+    @media  screen and (min-width: 1200px) {
+        @include text (36px, 1.17, 700, 0.03em);;
+    }
 }
 
 .client__list{
@@ -8,6 +12,9 @@
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
+    @media  screen and (min-width: 1200px){
+        margin-top: 50px;
+    }  
 }
 .client__items{
     width: calc((100% - 30px) / 2); 
